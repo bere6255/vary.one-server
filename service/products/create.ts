@@ -2,6 +2,7 @@ import Products from "../../entity/models/Products"
 type create = {
     name: string;
 	type: string;
+	writer: string;
 	avatar: string;
 	description: string;
 	units: string;

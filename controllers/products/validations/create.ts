@@ -2,15 +2,35 @@ const joi = require("joi");
 
 export default async (input: any) => {
 	const registerSchema = joi.object({
-		order_id: joi.string().required().messages({
-			"string.base": "Order id should be a type of 'text'",
-			"string.empty": "Order id cannot be empty",
-			"any.required": "Order id is required",
+		name: joi.string().required().messages({
+			"string.base": "Name should be a type of 'text'",
+			"string.empty": "Name cannot be empty",
+			"any.required": "Name is required",
 		}),
-		qty: joi.string().required().messages({
-			"string.base": "Quantity should be a type of 'text'",
-			"string.empty": "Quantity cannot be empty",
-			"any.required": "Quantity is required",
+		type: joi.string().required().messages({
+			"string.base": "Type should be a type of 'text'",
+			"string.empty": "Type cannot be empty",
+			"any.required": "Type is required",
+		}),
+		writer: joi.string().required().messages({
+			"string.base": "Writer should be a type of 'text'",
+			"string.empty": "Writer cannot be empty",
+			"any.required": "Writer is required",
+		}),
+		avatar: joi.string().dataUri().required().messages({
+			"string.base": "Avatar should be a type of 'text'",
+			"string.empty": "Avatar cannot be empty",
+			"any.required": "Avatar is required",
+		}),
+		description: joi.string().required().messages({
+			"string.base": "Description should be a type of 'text'",
+			"string.empty": "Description cannot be empty",
+			"any.required": "Description is required",
+		}),
+		units: joi.string().required().messages({
+			"string.base": "Units should be a type of 'text'",
+			"string.empty": "Units cannot be empty",
+			"any.required": "Units is required",
 		})
 	});
 
